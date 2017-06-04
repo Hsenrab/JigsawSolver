@@ -1,0 +1,34 @@
+import numpy as np
+
+
+class RawJigsawPiece:
+
+    def __init__(self, input_piece_image: np.ndarray, input_piece_mask: np.ndarray):
+        """
+
+        Args:
+            input_piece_image: The image containing the jigsaw piece
+            input_piece_mask: A mask indicating which parts of the image are part of the jigsaw piece.
+        """
+
+        # Check that image and mask are the correct size.
+        if input_piece_image.shape != input_piece_mask.shape:
+            raise ValueError("piece image and piece mask must be the same size")
+
+        self.piece_image = input_piece_image
+        self.piece_mask = input_piece_mask
+
+
+    def from_image(self, input_image:np.ndarray):
+        """
+
+        Args:
+            input_image: The image containing the jigsaw piece. To create a raw jigsaw piece from.
+        """
+        raise NotImplementedError("Not yet implemented")
+
+
+
+
+
+
